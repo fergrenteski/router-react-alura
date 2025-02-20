@@ -1,13 +1,10 @@
 import React from 'react'
-import Banner from 'components/Banner'
 import styles from './Home.module.css'
 import posts from 'json/posts.json'
 import Post from 'components/Post'
 
 const home = () => {
   return (
-    <main>
-      <Banner />
       <ul className={styles.posts}>
       {posts.map((post) => (
           <li key={post.id}>
@@ -15,7 +12,6 @@ const home = () => {
           </li>
         ))}
       </ul>
-    </main>
   )
 }
 
