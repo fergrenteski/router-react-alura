@@ -6,6 +6,7 @@ import NotFound from 'pages/NotFound';
 import Header from 'components/common/Header';
 import Footer from 'components/common/Footer';
 import DefaultPage from 'components/common/DefaultPage';
+import Post from 'pages/Post';
 
 function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ function AppRoutes() {
         <Route  path='/' element={<DefaultPage />}>
           <Route index element={<Home/>} />
           <Route path="/about" element={<About/>} />
+          <Route path="/post/:id" element={<Post/>} />
         </Route>
         <Route path='*' element={< NotFound />} />
       </Routes>
