@@ -10,6 +10,10 @@ const Post = () => {
   const parametros = useParams();
 
   const post = posts.find((post) => post.id === Number(parametros.id));
+
+  if(!post) {
+    return <h1>Post não encontrado...</h1>
+  }
   return (
     <PostModel fotoCapa={`assets/posts/${post.id}/capa.png`} titulo={post.titulo}>
       <div className='post-markdown-container'>
